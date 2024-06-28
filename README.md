@@ -294,6 +294,9 @@ source = MicrophoneAudioSource()
 # To take input from file:
 # source = FileAudioSource("<filename>", sample_rate=16000)
 
+# Make sure the model has been trained with the same sample rate
+print(source.sample_rate)
+
 stream = mic.stream.pipe(
     # Reformat stream to 5s duration and 500ms shift
     dops.rearrange_audio_stream(sample_rate=source.sample_rate),
