@@ -284,7 +284,7 @@ Obtain overlap-aware speaker embeddings from a microphone stream:
 ```python
 import rx.operators as ops
 import diart.operators as dops
-from diart.sources import MicrophoneAudioSource #, FileAudioSource
+from diart.sources import MicrophoneAudioSource, FileAudioSource
 from diart.blocks import SpeakerSegmentation, OverlapAwareSpeakerEmbedding
 
 segmentation = SpeakerSegmentation.from_pretrained("pyannote/segmentation", use_hf_token="")
